@@ -1,0 +1,394 @@
+$main: #24232c;
+$main-green: #a4ffaf;
+h1 {
+  font-size: 24px;
+  color: #817d92;
+  margin-bottom: 31px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.password-none {
+  color: #e6e5ea;
+  opacity: 0.25;
+  font-size: 32px;
+
+  margin: 0;
+}
+.password {
+  color: #e6e5ea;
+
+  font-size: 32px;
+
+  margin: 0;
+}
+.password-display {
+  width: 476px;
+  height: 42px;
+  margin-bottom: 24px;
+  background-color: $main;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 32px;
+}
+.icon-copy {
+  cursor: pointer;
+  display: flex;
+
+  align-items: center;
+  fill: $main-green;
+  svg {
+    margin-left: 16px;
+  }
+  svg:hover {
+    fill: white;
+  }
+  p {
+    color: $main-green;
+    font-size: 18px;
+  }
+}
+
+.settings {
+  height: 472px;
+  width: 476px;
+  padding: 24px 32px 44px;
+  background-color: $main;
+}
+.checkboxes {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 9px 0;
+  li {
+    align-items: center;
+    display: flex;
+    margin-bottom: 23px;
+
+    input {
+      display: none;
+    }
+    label {
+      display: block;
+      position: relative;
+      padding-left: 44px;
+
+      font-size: 18px;
+      user-select: none;
+    }
+    input ~ .checkmark {
+      cursor: pointer;
+    }
+    input ~ .checkmark:hover {
+      border: 2px solid $main-green;
+    }
+    label input:checked ~ .checkmark {
+      background-color: $main-green;
+      border: 2px solid $main-green;
+    }
+
+    label input:checked ~ .checkmark:after {
+      display: flex;
+      justify-content: center;
+      margin-top: -2px;
+      transform: scale(1.2);
+    }
+
+    //To hide the checkmark when not checked//
+
+    .checkmark:after {
+      content: url("./assets/images/IconCheck.svg");
+
+      display: none;
+    }
+    @supports (-moz-appearance: none) {
+      .checkmark:after {
+        content: url("./assets/images/IconCheck.svg");
+        margin-top: 6px;
+        display: none;
+      }
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: -1px;
+      border: 2px solid #e6e5ea;
+      background-color: transparent;
+    }
+  }
+}
+.generate-button {
+  width: 476px;
+  cursor: pointer;
+  height: 65px;
+  background-color: $main-green;
+  font-size: 18px;
+  font-weight: 700;
+  color: $main;
+  margin: 32px 0;
+  span {
+    margin-right: 24px;
+  }
+  svg {
+    fill: $main;
+  }
+}
+.generate-button:hover {
+  background-color: transparent;
+  border: 2px solid $main-green;
+  color: $main-green;
+  svg {
+    fill: $main-green;
+  }
+}
+
+.range-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-size: 18px;
+    color: #e6e5ea;
+    margin: 10px 0;
+  }
+  span {
+    font-size: 32px;
+    color: $main-green;
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%; /* Specific width is required for Firefox. */
+  appearance: none;
+  height: 8px;
+  cursor: pointer;
+  background: #18171f;
+  outline: none;
+  margin-bottom: 33px;
+  margin-top: 25px;
+  /* Otherwise white in Chrome */
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+// Slider Thumbs
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  height: 28px;
+  width: 28px;
+  border-radius: 60% 40% 60% 40%/50% 50% 50% 50%;
+  background: #e6e5ea;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 50%;
+  margin-left: 1px;
+
+  background: radial-gradient(
+    circle at 50% 40%,
+    #fcfcfc,
+    #c2c2c2 66%,
+    #000000 100%
+  );
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  border: 2px solid $main-green;
+
+  background: #18171f;
+}
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 28px;
+  width: 28px;
+  border-radius: 60% 40% 60% 40%/50% 50% 50% 50%;
+  background: #e6e5ea;
+  cursor: pointer;
+  margin-top: -10px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 50% 40%,
+    #fcfcfc,
+    #c2c2c2 66%,
+    #000000 100%
+  );
+}
+input[type="range"]::-moz-range-thumb:hover {
+  border: 2px solid $main-green;
+  background: #18171f;
+}
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  height: 28px;
+  width: 28px;
+  border-radius: 60% 40% 60% 40%/50% 50% 50% 50%;
+  background: #e6e5ea;
+  cursor: pointer;
+  margin-top: -10px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 50% 40%,
+    #fcfcfc,
+    #c2c2c2 66%,
+    #000000 100%
+  );
+}
+input[type="range"]::-ms-thumb:hover {
+  border: 2px solid $main-green;
+  background: #18171f;
+}
+input[type="range"]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.strength-box {
+  width: 100%;
+  height: 72px;
+  background-color: #18171f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-size: 18px;
+    color: #817d92;
+    margin-left: 32px;
+  }
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 31.5px;
+  div {
+    width: 6px;
+    height: 24px;
+    border: 2px solid #e6e5ea;
+    margin-right: 8.5px;
+  }
+  p {
+    font-size: 24px;
+    color: #e6e5ea;
+    margin-right: 15.5px;
+  }
+}
+
+.level-1 {
+  div:nth-child(-n + 2) {
+    background-color: #f64a4a;
+    border: 2px solid #f64a4a;
+  }
+}
+.level-2 {
+  div:nth-child(-n + 3) {
+    background-color: #fb7c58;
+    border: 2px solid #fb7c58;
+  }
+}
+.level-3 {
+  div:nth-child(-n + 4) {
+    background-color: #f8cd65;
+    border: 2px solid #f8cd65;
+  }
+}
+.level-4 {
+  div {
+    background-color: $main-green;
+    border: 2px solid $main-green;
+    margin-right: 8.5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .password-none {
+    font-size: 24px;
+  }
+
+  .password {
+    font-size: 24px;
+  }
+  .password-display {
+    width: 311px;
+    height: 30;
+    padding: 15px 16px;
+  }
+  .settings {
+    height: 380px;
+    width: 311px;
+    padding: 14px 16px 31px;
+  }
+  .checkboxes {
+    li {
+      margin-bottom: 16px;
+      label {
+        font-size: 16px;
+      }
+    }
+  }
+  .range-label {
+    p {
+      font-size: 16px;
+    }
+    span {
+      font-size: 24px;
+    }
+  }
+  .checkmark {
+    transform: scale(0.8);
+  }
+  label input:checked ~ .checkmark:after {
+    margin-top: 1px !important;
+  }
+
+  .strength-box {
+    height: 56px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+  .level {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .generate-button {
+    width: 311px;
+
+    height: 56px;
+
+    font-size: 16px;
+
+    margin: 16px 0;
+    span {
+      margin-right: 10px;
+    }
+    svg {
+      fill: $main;
+    }
+  }
+  h1 {
+    font-size: 16px;
+  }
+}

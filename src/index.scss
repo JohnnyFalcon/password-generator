@@ -1,0 +1,21 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
