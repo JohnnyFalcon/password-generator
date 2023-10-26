@@ -49,5 +49,5 @@ Users should be able to:
 ## Author
 
 - Website - https://www.jakubsokolowski.me
-- Frontend Mentor - [@JohnnyFalcon](https://www.frontendmentor.io/profile/yourusername](https://www.frontendmentor.io/profile/JohnnyFalcon))
+- Frontend Mentor - [@JohnnyFalcon](https://www.frontendmentor.io/profile/JohnnyFalcon)
 
